@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <form action="/Home/Privacy">
+        <input type="text" name="name" placeholder="أدخل اسمك هنا..." />
+        <button type="submit">مرحبا بك</button><br />
+    </form>
+</div>
+
+<div class="text-center">
+    @Html.TextArea("text", "", new { placeholder = "أدخل النص هنا..." })
+</div>
+
+<div class="text-center">
+    <br/>
+    @Html.TextBox("price")
+</div>
+
+<div class="text-center"><br />
+    @Html.ActionLink("أضغط هنا", "Privacy")
+</div>

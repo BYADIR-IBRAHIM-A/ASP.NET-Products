@@ -1,0 +1,14 @@
+﻿@model IEnumerable<ProductModel>
+
+<h2 class="col-12 text-center">انواع المنتجات</h2>
+<ul>
+    @foreach (var product in Model)
+    {
+        <li>
+            <img src="~/img/@product.ImagePath" alt="@product.Name" width="100" />
+            <a href="@Url.Action("Details", "Products",
+                new { id = product.Id })">@product.Name</a>
+                   - @product.Price
+        </li>
+    }
+</ul>
